@@ -37,7 +37,7 @@ var auth_data = function(str) {
     return auth;
 }(argv.auth);
 // Init logger
-var logger = new (winston.Logger)({
+var logger = winston.createLogger({
     transports: [
         new (winston.transports.Console)({ json: false, timestamp: true })
     ]});
