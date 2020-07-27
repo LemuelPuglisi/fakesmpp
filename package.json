@@ -1,0 +1,28 @@
+{
+  "name": "fakesmpp",
+  "version": "1.0.0",
+  "description": "Fake smpp server",
+  "main": "smpp.js",
+  "scripts": {
+    "test": "node smpp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LemuelPuglisi/fakesmpp.git"
+  },
+  "keywords": [
+    "smpp"
+  ],
+  "author": "scorpioa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LemuelPuglisi/fakesmpp/issues"
+  },
+  "homepage": "https://github.com/LemuelPuglisi/fakesmpp#readme",
+  "dependencies": {
+    "optimist": "^0.6.1",
+    "smpp": "^0.4.0",
+    "strftime": "^0.10.0",
+    "winston": "^3.3.3"
+  }
+}
