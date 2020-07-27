@@ -1,10 +1,11 @@
 /**
  * Fake SMPP.
  */
-var smpp = require('smpp');
-var winston = require('winston');
-var strftime = require('strftime');
-var optimist = require('optimist');
+var smpp      = require('smpp');
+var winston   = require('winston');
+var strftime  = require('strftime');
+var optimist  = require('optimist');
+
 var argv = optimist
     .options('port', {alias: 'p', default: 2775, describe: 'Port which server listen to.'})
     .options('ddmin', {default: 0, describe: 'Minimum delay after submit_sm requested and deliver_sm request to ESME.'}) // delivery min delay
@@ -20,6 +21,7 @@ if (argv.help) {
 }
 
 var Statuses = require('./statuses').Statuses;
+
 // Read auth data
 var auth_data = function(str) {
     var auth = {};
@@ -36,6 +38,7 @@ var auth_data = function(str) {
     });
     return auth;
 }(argv.auth);
+
 // Init logger
 var logger = winston.createLogger({
     transports: [
